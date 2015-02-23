@@ -1,0 +1,155 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body{
+	background: rgba(0,0,0,0.9);
+	font-family: 'Oswald', sans-serif;
+}
+
+.wrapper {
+	width:80%;
+	margin:0 auto;
+}
+
+.column a{
+	margin:0 auto;
+	padding:0;
+	transition: all 1s;
+	overflow: hidden;
+	display: block;
+	position:relative;
+	bottom:-1000px;
+}
+
+.column{
+	width:33.33%;
+	float:left;
+}
+
+.column img{
+	position: relative;
+	width:100%;
+	margin:0;
+	padding:0;
+	display: block;
+		/*transform: rotateZ(90deg);*/
+}
+
+.column .lightbox{
+	position:fixed;
+	top:50%;
+	left:50%;
+	/*positioning first based on broswer and then use transform translateY and X to move it 50% of itself*/
+	-webkit-transform: translateY(-50%) translateX(-50%);
+	border: 20px solid white;
+	border-bottom: 50px solid white;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+	width:500px;
+	/*height:100vh;*/
+	z-index: 9999999;
+	transition: all 0.8s;
+	/*opacity: 0.6;*/
+
+}
+
+.closeBox {
+	position: relative;
+	top:0;
+	left:0;
+	width: 100%;
+	transition: all 1s;
+	z-index: 1;
+}
+
+a.slideUp{
+	bottom:0;
+}
+.flip{
+	transform:rotateY(180deg);
+	transition: all 1s;
+}
+.box{
+	position: relative;
+}
+
+.overlay{
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height:100%;
+	z-index: -9000;
+	background: rgba(0, 0, 0, 0.7);
+	/*display: none;*/
+	left: 0;
+	top: 0;
+	/*border: 3px solid red;*/
+	/*color:#ccc;*/
+	text-decoration: none;
+	font-size: 14px;
+	transition: all 0.5s;
+	text-transform: uppercase;
+}
+.overlay p{
+	text-align: center;
+/*	margin-top:20%;*/
+	text-shadow: 1px 1px 0 black;
+	color:#ccc;
+}
+.overlay h3{
+	text-align: center;
+	margin-top: 60%;
+	color:white;
+	text-transform: uppercase;
+	font-size: 15px;
+	text-shadow: 1px 1px 0 black;
+}
+.box:hover .overlay{
+	opacity: 1;
+	z-index: 9000;
+}
+.box:hover img{
+/*	transform: scale(2);*/
+}
+
+.hideMe{
+	display: none;
+}
+
+.arrow{
+	color:black;
+	background: black;
+	width:100px;
+	padding:10px 5px;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 999999;
+	top:50%;
+/*	left:60%;*/
+	font-size: 50px;
+	text-align: center;	
+	display: none;
+}
+
+/*arrow section that we didn't end up keeping*/
+/*.show{
+	display: block;
+}
+.arrow.next{
+	left:22%;
+}
+.arrow.prev{
+	left:70%;
+}
+
+a.arrowButton {
+    text-decoration: none;
+    color: white;
+}
+*/
+
+

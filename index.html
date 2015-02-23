@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Project OOOO'Mannnna</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="wrapper">
+<!-- THESE ARE THE ARROWS THEY APPEAR WHEN YOU CLICK THE PHOTO -->
+	<div class="arrows">
+		<div class="arrow next">
+			<a href="#" class="arrowButton">
+				<i class="fa fa-arrow-left"></i>
+			</a>
+		</div>
+		<div class="arrow prev">
+			<a href="#" class="arrowButton">
+				<i class="fa fa-arrow-right"></i>
+			</a>
+		</div>
+	</div>
+	<!-- END OF THE ARROW -DIDN'T WANT THEM TO BE IN THE COLUMNS CAUSE OF POSITIONING -->
+	<div class="column column1">
+		<div class="box">
+			<a href="#" class="flat">
+				<img class="flip" src="dogs/omar2.jpg" alt="">
+				<div class="overlay dontShow">
+					<h3>Batgirl</h3>
+					<p> #hambun</p>
+			    </div>
+			</a> 
+		</div>
+
+		<div class="box">
+			<a href="#" class="flat">
+				<img class="flip" src="dogs/sarah2.jpg" alt="">
+				<div class="overlay dontShow">
+					<h3>Batgirl</h3>
+					<p> #hambun</p>
+				</div>
+			</a> 
+		</div>
+
+		<div class="box">
+			<a href="#" class="flat">
+				<img class="flip" src="dogs/kate2.jpg" alt="">
+				<div class="overlay dontShow">
+					<h3>Batgirl</h3>
+					<p> #hambun</p>
+				</div>
+			</a> 
+		</div>
+
+		<div class="box">
+			<a href="#" class="flat">
+				<img class="flip" src="dogs/ryan2.jpg" alt="">
+				<div class="overlay dontShow">
+					<h3>Batgirl</h3>
+					<p> #hambun</p>
+				</div>
+			</a> 
+		</div>
+
+		<div class="box">
+		<a href="#" class="flat">
+			<img class="flip" src="dogs/anna2.jpg" alt="">
+				<div class="overlay dontShow">
+					<h3>Batgirl</h3>
+					<p> #hambun</p>
+				</div>
+			</a>
+		 </div>
+
+	</div>
+	<div class="column column2">
+
+		<div class="box">
+			<a href="#" class="flat">
+				<img class="flip" src="dogs/ryan2.jpg" alt="">
+				<div class="overlay dontShow">
+					<h3>Batgirl</h3>
+					<p>#hambun</p>
+				</div>
+			</a> 
+		</div>
+
+		<div class="box">
+			<a href="#" class="flat">
+				<img class="flip" src="dogs/kate2.jpg" alt="">
+				<div class="overlay dontShow">
+					<h3>Batgirl</h3>
+					<p>#hambun</p>
+				</div>
+			</a> 
+		</div>
+		<div class="box">
+			<a href="#" class="flat">
+				<img class="flip" src="dogs/anna2.jpg" alt="">
+				<div class="overlay dontShow">
+					<h3>Batgirl</h3>
+					<p>#hambun</p>
+				</div>
+			</a> 
+		</div>
+
+		<div class="box">
+			<a href="#" class="flat">
+				<img class="flip" src="dogs/sarah2.jpg" alt="">
+				<div class="overlay dontShow">
+					<h3>Batgirl</h3>
+					<p>#hambun</p>
+				</div>
+			</a> 
+		</div>
+
+		<div class="box">
+			<a href="#" class="flat">
+				<img class="flip" src="dogs/omar2.jpg" alt="">
+				<div class="overlay dontShow">
+					<h3>Batgirl</h3>
+					<p>#hambun</p>
+				</div>
+			</a> 
+		</div>
+	
+	</div>
+	<div class="column column3">
+		<div class="box">
+			<a href="#" class="flat">
+				<img class="flip" src="dogs/anna2.jpg" alt="">
+				<div class="overlay dontShow">
+					<h3>Batgirl</h3>
+					<p>#hambun</p>
+				</div>
+			</a> 
+		</div>
+
+		<div class="box">
+			<a href="#" class="flat">
+				<img class="flip" src="dogs/ryan2.jpg" alt="">
+					<div class="overlay dontShow">
+						<h3>Batgirl</h3>
+						<p>#hambun</p>
+					</div>
+			</a> 
+		</div>
+		<div class="box">
+			<a href="#" class="flat">
+				<img class="flip" src="dogs/sarah2.jpg" alt="">
+					<div class="overlay dontShow">
+						<h3>Batgirl</h3>
+						<p>#hambun</p>
+					</div>
+			</a> 
+		</div>
+
+		<div class="box">
+			<a href="#" class="flat">
+				<img class="flip" src="dogs/omar2.jpg" alt="">
+				<div class="overlay dontShow">
+					<h3>Batgirl</h3>
+					<p>#hambun</p>
+				</div>
+			</a> </div>
+
+		<div class="box">
+			<a href="#" class="flat">
+				<img class="flip" src="dogs/kate2.jpg" alt="">
+				<div class="overlay dontShow">
+					<h3>Batgirl</h3>
+					<p>#hambun</p>
+			    </div>
+			</a> 
+		</div>
+	
+	</div>
+
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+	$(function(){
+
+		var columns = $('.column');
+		var counter = 0;
+
+		columns.each(function(cindex, column) {
+			var anchors = $(this).find('a');
+			anchors.each(function(aindex, anchor) {
+				setTimeout(function() {
+					$(anchor).addClass('slideUp');
+				}, counter++ * 200);
+			});
+		});
+
+		// for (i=0; i < columns.length; i++) {
+		// 	var anchors = columns.eq(i).find('a');
+		// 	console.log(i);
+		// 	for (j=0; j < anchors.length; j++) {
+		// 		console.log(j);
+		// 		setTimeout(function() {
+		// 			anchors.eq(j).addClass('slideUp');
+		// 		}, counter++ * 200);
+		// 	}
+		// }
+
+		// setTimeout(function() {
+		// 	console.log('helloe!');
+		// 	$('.column a').addClass('slideUp');
+		// }, 1000);
+
+
+		$('.column a').on('click', function(e){
+			e.preventDefault();
+			var img = $(this).find('img');
+			var link = $(this);
+
+			$('.lightbox').not(img).removeClass('lightbox');
+			$('.dontShow').not(img).removeClass('hideMe');
+			$('.show').not(img).removeClass('show');
+			// attempt to switch selected photo to the previous or next with the arrow buttons 
+			// $('a.arrowButton').on('click',function(){
+			// 	console.log('am i working');
+			// 	$(img).removeClass('lightbox').next(img).addClass('lightbox');
+			// });
+
+			// console.log(width,height);
+			
+			// above line probably goes on the image not the link
+			// var close = $(this).removeClass('lightbox');
+			if(img.hasClass('lightbox')){
+				img.removeClass('lightbox');
+				img.addClass('closeBox');
+				// blow out old styles
+				link.attr('style','');
+			}
+			else {
+				var width = img.width();
+				var height = img.height();
+				img.addClass("lightbox");
+				link.css({
+					width:width,
+					height:height
+				});
+				link.css('background','#ccc');
+				$(".arrow").not(link).addClass("show");
+				link.on('mouseenter', function(){
+					img.addClass("flip");
+				});
+				$('.dontShow').addClass('hideMe');
+
+			}
+			
+			
+
+
+			// We are going to make it flip only when the .lightbox class is active
+
+
+
+
+
+
+		});
+
+
+
+	});
+
+
+</script>
+	
+</body>
+</html>
